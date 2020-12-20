@@ -14,19 +14,18 @@
     </head>
     <body>
         <header>
-            <h1>Vue Course Goals</h1>
+            <h1>Task List</h1>
         </header>
-        <section id="user-goals">
-            <h2>My course goals</h2>
-            <input type="text" v-model="enteredGoalValue" />
-            <button @click="addGoal">Add Goal</button>
-            <p v-if="goals.length === 0">
+        <section id="user-tasks">
+            <h2>My Task</h2>
+            <input type="text" v-model="enteredTaskValue" />
+            <button @click="addTask">Add Tasks</button>
+            <p v-if="tasks.length === 0">
                 No goals have been added yet - please start adding some!
             </p>
-            <ul v-for="(goal, index) in goals">
-                <li :key="goal" @click="removeGoal(index)">
-                    <p>{{goal}}</p>
-                    <input type="text" @click.stop />
+            <ul v-for="(task, index) in tasks">
+                <li :key="task" @click="removeTask(index)">
+                    <p>{{task}}</p>
                 </li>
             </ul>
         </section>

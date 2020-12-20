@@ -1,19 +1,18 @@
 const app = Vue.createApp({
     data() {
         return {
-            enteredGoalValue: "",
-            goals: [],
+            enteredTaskValue: "",
+            tasks: [],
         };
     },
     methods: {
-        addGoal() {
-            this.goals.push(this.enteredGoalValue);
-            console.log(this.goals);
+        addTask() {
+            this.tasks.push(this.enteredTaskValue);
         },
-        removeGoal(index) {
-            this.goals.splice(index, 1);
+        removeTask(index) {
+            this.tasks.splice(index, 1);
         },
     },
 });
 
-app.mount("#user-goals");
+app.mount("#user-tasks");
